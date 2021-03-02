@@ -1,0 +1,25 @@
+.tag {
+	display: inline-block;
+	padding: 0.45rem;
+	background-color: var(--primaryColor);
+	color: var(--mainWhite);
+	border-radius: 10px;
+	text-transform: capitalize;
+	font-weight: bold;
+	margin: 0.3rem 0.3rem;
+	transition: all 0.2s linear;
+	font-size: 0.9rem;
+}
+
+.tag:hover {
+	background-color: transparent;
+	color: var(--primaryText);
+	border: 2px solid var(--primaryColor);
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+	.tag {
+		font-size: 1.1rem;
+	}
+}
