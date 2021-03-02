@@ -19,7 +19,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 		<motion.div variants={cardVariant} initial="hidden" animate="visible" className={styles.project}>
 			<Rosa animation="flip-right">
 				<div className={styles.project__img__container}>
-					<img src={cover} alt={title} className={styles.project__image} />
+					<img src={cover.formats.thumbnail.url} alt={title} className={styles.project__image} />
 					<div className={styles.project__icon__container}>
 						{demoLink && (
 							<Link href={demoLink}>

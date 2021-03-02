@@ -1,3 +1,4 @@
+import { CoverImage } from './CoverImage';
 import { Tag } from './Tag';
 
 export interface Post {
@@ -6,7 +7,7 @@ export interface Post {
 	content: string;
 	slug: string;
 	readingTime: string;
-	cover: string;
+	cover: CoverImage;
 	tags: Tag[];
 	_id: string;
 	published_at: string;
