@@ -16,6 +16,7 @@
     "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
     "react-on-scroll-animation": "^1.0.0",
+    "react-share": "^4.4.0",
     "react-switch": "^6.0.0",
     "react-syntax-highlighter": "^15.4.3"
   },
