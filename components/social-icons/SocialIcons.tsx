@@ -26,7 +26,7 @@ const Socialicons: React.FC<SocialIconsProps> = ({ color = 'var(--primaryText)' 
 					color={color}
 				/>
 			</Link>
-			<Link href="/">
+			<Link href="https://www.linkedin.com/in/satish-naikawadi-8558b5192/">
 				<FaLinkedinIn
 					className={styles.social__icon}
 					style={{ fill: color, border: `3px solid ${color}` }}
