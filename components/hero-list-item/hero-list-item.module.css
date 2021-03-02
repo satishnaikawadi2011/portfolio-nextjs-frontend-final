@@ -1,0 +1,29 @@
+.hero__list__item {
+	list-style: none;
+	display: flex;
+	margin: 1rem 0;
+}
+
+.hero__list__item span {
+	text-transform: capitalize;
+	color: var(--primaryText);
+}
+
+.hero__list__item__icon {
+	width: 30px;
+	height: 30px;
+	fill: var(--primaryColor);
+	margin-right: 1rem;
+}
+
+.hero__list__item span {
+	font-weight: bold;
+	display: block;
+}
+
+.hero__list__item p {
+	margin-bottom: 0;
+	font-size: 0.8rem;
+	color: var(--secondaryText);
+	display: block;
+}
