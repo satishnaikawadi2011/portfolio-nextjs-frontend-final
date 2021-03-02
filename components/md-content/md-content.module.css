@@ -1,0 +1,111 @@
+.md__content p {
+	font-size: 1.1rem;
+	margin-bottom: 3rem;
+	color: var(--primaryText);
+}
+
+.md__content h1,
+.md__content h2,
+.md__content h3,
+.md__content h4,
+.md__content h5,
+.md__content h6 {
+	font-family: 'Londrina Solid', cursive;
+	color: var(--secondaryColor);
+	text-shadow: var(--mdTextShadow);
+}
+
+.md__content h1 {
+	font-size: 2.5rem;
+}
+
+.md__content h2 {
+	font-size: 2.2rem;
+}
+
+.md__content h3 {
+	font-size: 1.9rem;
+}
+
+.md__content h4 {
+	font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+	.md__content h1 {
+		letter-spacing: 0.5rem;
+		font-size: 4.5rem;
+	}
+
+	.md__content h4 {
+		font-size: 3.3rem;
+	}
+
+	.md__content h2 {
+		font-size: 3.9rem;
+	}
+
+	.md__content h3 {
+		font-size: 3.6rem;
+	}
+
+	.md__content p {
+		font-size: 1.3rem;
+	}
+}
+
+.md__content a {
+	position: relative;
+	display: inline-block;
+	color: var(--primaryColor);
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: capitalize;
+	transition: all 0.3s linear;
+}
+
+.md__content a:hover {
+	border-bottom: 2px solid var(--primaryColor);
+}
+
+.md__content code:not([class]) {
+	text-align: baseline;
+	background-color: #192734;
+	padding: 0.1rem 0.25rem;
+}
+
+.md__content blockquote {
+	border-color: var(--primaryColor);
+	border-left: 20px;
+	background-color: var(--bgCard);
+}
+
+.md__content blockquote p {
+	padding: 1rem;
+}
+
+.md__content strong {
+	font-weight: bold;
+}
+
+.md__content ul {
+	list-style-position: inside;
+	list-style: none;
+	margin-bottom: 4rem;
+}
+
+.md__content ul li {
+	margin-left: 1.5rem;
+	margin-bottom: 0.8rem;
+}
+
+.md__content ul li p {
+	display: inline;
+}
+
+.md__content ul li:before {
+	content: "⦿";
+	font-size: 50%; /* or whatever */
+	padding-right: 10px;
+	vertical-align: middle;
+}
