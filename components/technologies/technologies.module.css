@@ -1,0 +1,18 @@
+.tech__section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tech__icon {
+	height: 50px;
+	width: 50px;
+	margin: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 992px) {
+	.tech__icon {
+		height: 4rem;
+		width: 4rem;
+	}
+}
