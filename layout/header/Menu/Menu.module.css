@@ -1,0 +1,31 @@
+.navbar__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	z-index: 20;
+}
+
+.menuButton {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 21;
+	outline: 0;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.menuIcon {
+	color: white;
+	width: 30px;
+	height: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+	.navbar__container {
+		display: flex;
+	}
+}
