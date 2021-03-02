@@ -1,16 +1,263 @@
-html,
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@0;1&family=Economica:ital,wght@0,400;0,700;1,700&family=Lemonada:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&display=swap');
+/* CSS variables */
+:root {
+	--mainGradient: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+	--reverseGradient: linear-gradient(to right, #00c9ff 0%, #92fe9d 100%);
+	--primaryColor: #00c9ff;
+	--secondaryColor: #92fe9d;
+	--mainGrey: #e8e8e8;
+	--darkGrey: #a9a9a9;
+	--mainWhite: #fff;
+	--mainBlack: #222;
+	--fontColor: var(--mainBlack);
+	--offWhite: #f5f5f5;
+	--mainTransition: all 0.5s linear;
+	--mainSpacing: 0.25rem;
+	--lightShadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+	--darkShadow: 6px 7px 9px 0px rgba(0, 0, 0, 0.75);
+
+	--bgColor: #f2fcff;
+	--bgCard: #e6faff;
+	--bgHover: #bff2ff;
+	--primaryText: #222;
+	--secondaryText: #a9a9a9;
+
+	--timelineSecondaryText: var(--primaryText);
+	--mdTextShadow: 3px 3px 2px black;
+}
+
+[data-theme="dark"] {
+	--primaryColor: #00c9ff;
+	--secondaryColor: #92fe9d;
+	--mainGradient: linear-gradient(315deg, #380036 0%, #0cbaba 74%);
+	--reverseGradient: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+	--mainGrey: #e8e8e8;
+	--darkGrey: #a9a9a9;
+	--mainWhite: #fff;
+	--offWhite: #f5f5f5;
+	--mainBlack: #222;
+	--mainTransition: all 0.5s linear;
+	--mainSpacing: 0.25rem;
+
+	--bgColor: #15202b;
+	--bgCard: #192734;
+	--bgHover: #22303c;
+	--primaryText: #ffffff;
+	--secondaryText: #8899a6;
+
+	--timelineSecondaryText: var(--secondaryText);
+}
+
+/* Resets */
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+button {
+	cursor: pointer;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: 'Cantarell', sans-serif;
+	background: var(--bgColor);
+	color: var(--primaryText);
+	line-height: 1.5;
+	font-size: 1rem;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Londrina Solid', cursive;
+	margin-bottom: 1.25rem;
+	letter-spacing: var(--mainSpacing);
+}
+
+h1 {
+	font-size: 3.3rem;
+}
+
+h2,
+h3,
+h4 {
+	font-family: 'Economica', sans-serif;
+}
+
+h2 {
+	font-size: 2.3rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+p {
+	margin-bottom: 1.25rem;
+	line-height: 2;
+	font-weight: 300;
+	color: var(--secondaryText);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.section {
+	margin-bottom: 3rem;
+}
+
+.mainBtn {
+	padding: 1rem 1.5rem;
+	text-transform: capitalize;
+	background-image: var(--mainGradient);
+	transition: var(--mainTransition);
+	color: var(--primaryText);
+	outline: 0;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.mainBtn:hover {
+	background-image: var(--reverseGradient);
+}
+
+.section__title {
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: var(--mainSpacing);
+	color: var(--primaryColor);
+}
+
+.section__center {
+	margin: 0 auto;
+}
+
+/* More global styles */
+.divider {
+	width: 100%;
+	background-color: var(--darkGrey);
+	height: 0.015rem;
+	margin-bottom: 0.6rem;
+}
+
+/* Projects Page */
+
+.projects__section {
+	margin: 4rem 3rem 2rem 4rem;
+}
+
+.btn__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+	.projects__section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.projects__section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+/* Media Queries */
+
+/* About */
+@media screen and (min-width: 768px) {
+	.about__cards {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section__center {
+		padding: 0 4rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.section__center {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.right__half {
+		width: 45%;
+	}
+
+	.left__half {
+		width: 45%;
+		margin-right: 2rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.about__card {
+		text-align: center;
+		flex: 0 0 calc(33.333%-2rem);
+		background-color: var(--bgCard);
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.about__card {
+		margin: 0 0.2rem;
+	}
+}
+
+.about__card {
+	widows: 90%;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	margin-bottom: 3rem;
+	padding: 1rem;
+	background-color: var(--bgCard);
+}
+
+/* End Media Queries */
+
+/* TODO: */
+/* Some module styles here */
+/* education */
+#exp__sec h4 {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+#exp__sec {
+	padding-bottom: 2rem;
 }
