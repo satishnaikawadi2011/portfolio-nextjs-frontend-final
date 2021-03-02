@@ -1,6 +1,3 @@
-import Head from 'next/head';
-import Footer from '../layout/footer/Footer';
-import Header from '../layout/header/Header';
 import PageWrapper from '../layout/pagewrapper/PageWrapper';
 
 export default function Home() {
