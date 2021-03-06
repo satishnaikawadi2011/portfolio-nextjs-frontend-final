@@ -23,7 +23,7 @@ const TileSection: React.FC<TileSectionProps> = ({ closeMenu }) => {
 				title="Posts"
 				subTitle="My articles on coding things which excites me!"
 				theme="card"
-				url="/blogs"
+				url="/posts"
 			/>
 			<NavTile
 				direction="right"
