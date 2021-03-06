@@ -1,4 +1,3 @@
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import React, { useRef, useState } from 'react';
 import EducationItem from '../../education-item/EducationItem';
 import styles from './education.module.css';

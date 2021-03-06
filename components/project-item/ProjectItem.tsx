@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './project-item.module.css';
 import { motion } from 'framer-motion';
 import { cardVariant } from '../../utils/variants';
-// import Rosa from 'react-on-scroll-animation';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import { Project } from '../../models/Project';
@@ -17,7 +16,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 }) => {
 	return (
 		<motion.div variants={cardVariant} initial="hidden" animate="visible" className={styles.project}>
-			{/* <Rosa animation="flip-right"> */}
 			<div className={styles.project__img__container}>
 				<img src={cover.url} alt={title} className={styles.project__image} />
 				<div className={styles.project__icon__container}>
@@ -40,7 +38,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 					return <Tag tagName={tag.name} key={tag.id} />;
 				})}
 			</div>
-			{/* </Rosa> */}
 		</motion.div>
 	);
 };

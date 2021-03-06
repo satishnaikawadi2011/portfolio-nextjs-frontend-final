@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './service-card.module.css';
-// import Rosa from 'react-on-scroll-animation';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import { fadeInRightVariant } from '../../animations/ScrollAnimations';
 
 interface ServiceCardProps {
 	icon: string;
@@ -8,9 +10,22 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, children }) => {
+	const [
+		ref,
+		inView
+	] = useInView({ triggerOnce: true });
 	return (
-		<div className={styles.service}>
-			{/* <Rosa animation="slide-up" duration={100}> */}
+		<motion.div
+			ref={ref}
+			className={styles.service}
+			variants={fadeInRightVariant}
+			initial="closed"
+			animate={
+
+					inView ? 'open' :
+					'closed'
+			}
+		>
 			<svg className={styles.service__icon}>
 				<use href={`images/sprite.svg#${icon}`} />
 			</svg>
@@ -20,8 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, children }) => {
 			<div className={styles.service__info}>
 				<p>{children}</p>
 			</div>
-			{/* </Rosa> */}
-		</div>
+		</motion.div>
 	);
 };
 
