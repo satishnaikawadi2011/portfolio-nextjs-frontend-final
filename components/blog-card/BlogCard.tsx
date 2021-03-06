@@ -29,7 +29,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 				<p className={styles.blog__description}>{truncateText(description, 150, '...')}</p>
 				<div className={styles.blog__tags__container}>
 					{tags.slice(0, 3).map((tag) => {
-						return <Tag tagName={tag.name} />;
+						return <Tag key={tag.id} tagName={tag.name} />;
 					})}
 				</div>
 				<strong className={styles.reading__time}>&bull; {readingTimeFunc(content).text}</strong>
