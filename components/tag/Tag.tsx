@@ -6,9 +6,10 @@ interface TagProps {
 	tagName: string;
 	bgColor?: string;
 	color?: string;
+	isProject?: boolean;
 }
 
-const Tag: React.FC<TagProps> = ({ tagName, bgColor, color }) => {
+const Tag: React.FC<TagProps> = ({ isProject = false, tagName, bgColor, color }) => {
 	const [
 		hover,
 		setHover
@@ -30,15 +31,26 @@ const Tag: React.FC<TagProps> = ({ tagName, bgColor, color }) => {
 	}
 	return (
 		<Link href={`/posts/tag/${tagName}`}>
-			<span
+			<a
+				style={{
+					cursor:
+
+							isProject ? 'none' :
+							'pointer',
+					...tagStyle
+				}}
+				onClick={(e) => {
+					if (isProject) {
+						e.preventDefault();
+					}
+				}}
 				key={tagName}
 				className={styles.tag}
-				style={tagStyle}
 				onMouseEnter={toggleHover}
 				onMouseLeave={toggleHover}
 			>
 				#{tagName}
-			</span>
+			</a>
 		</Link>
 	);
 };

@@ -35,7 +35,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 			<p className={styles.project__category}>{category.name}</p>
 			<div className={styles.blog__tags__container}>
 				{tags.slice(0, 3).map((tag) => {
-					return <Tag tagName={tag.name} key={tag.id} />;
+					return <Tag tagName={tag.name} isProject key={tag.id} />;
 				})}
 			</div>
 		</motion.div>
