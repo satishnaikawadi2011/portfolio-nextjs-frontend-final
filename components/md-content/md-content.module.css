@@ -4,6 +4,10 @@
 	color: var(--primaryText);
 }
 
+.md__content p:first-child {
+	margin-top: 3rem;
+}
+
 .md__content h1,
 .md__content h2,
 .md__content h3,
@@ -13,6 +17,11 @@
 	font-family: 'Londrina Solid', cursive;
 	color: var(--secondaryColor);
 	text-shadow: var(--mdTextShadow);
+}
+
+.md__content img {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
 .md__content h1 {
@@ -70,8 +79,9 @@
 
 .md__content code:not([class]) {
 	text-align: baseline;
-	background-color: #192734;
+	background-color: #243447;
 	padding: 0.1rem 0.25rem;
+	color: white;
 }
 
 .md__content blockquote {

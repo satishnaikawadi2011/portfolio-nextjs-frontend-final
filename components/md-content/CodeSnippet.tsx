@@ -3,8 +3,8 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/hljs/bash';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/hljs/javascript';
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/hljs/typescript';
-import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 import django from 'react-syntax-highlighter/dist/cjs/languages/hljs/django';
+import html from 'react-syntax-highlighter/dist/cjs/languages/hljs/htmlbars';
 import monokaiSublime from 'react-syntax-highlighter/dist/cjs/styles/hljs/monokai-sublime';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import Snackbar from '../snackbar/Snackbar';
@@ -16,11 +16,10 @@ SyntaxHighlighter.registerLanguage('javascript', javascript);
 SyntaxHighlighter.registerLanguage('typescript', typescript);
 SyntaxHighlighter.registerLanguage('shell', bash);
 SyntaxHighlighter.registerLanguage('django', django);
-SyntaxHighlighter.registerLanguage('jsx', jsx);
-
+SyntaxHighlighter.registerLanguage('html', html);
 interface CodeSnippetProps {
 	fileName?: string;
-	language: 'javascript' | 'typescript' | 'shell' | 'django' | 'jsx';
+	language: 'javascript' | 'typescript' | 'shell' | 'django' | 'html';
 	code: string;
 }
 
