@@ -31,7 +31,7 @@ const ProjectsPage = ({ projects }: InferGetStaticPropsType<typeof getStaticProp
 export default ProjectsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
-	const res = await fetch('https://saty-api.herokuapp.com/projects');
+	const res = await fetch('https://saty-api.herokuapp.com/projects?_sort=createdAt:DESC');
 	const projects: Project[] = await res.json();
 	return {
 		props: { projects }

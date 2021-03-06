@@ -37,7 +37,7 @@ const BlogsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
 export default BlogsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
-	const res = await fetch('https://saty-api.herokuapp.com/posts');
+	const res = await fetch('https://saty-api.herokuapp.com/posts?_sort=createdAt:DESC');
 	const posts: Post[] = await res.json();
 	return {
 		props: { posts }
