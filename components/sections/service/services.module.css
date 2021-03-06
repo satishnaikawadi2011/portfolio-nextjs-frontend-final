@@ -1,0 +1,10 @@
+.section__services {
+	margin: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+	.services__section {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

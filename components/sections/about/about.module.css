@@ -1,0 +1,35 @@
+.about {
+	padding: 1.5rem;
+}
+
+.about__text {
+	text-align: justify;
+	font-size: 0.95rem;
+	margin: 2rem auto;
+}
+
+@media screen and (min-width: 768px) {
+	.about__cards {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section__center {
+		padding: 0 4rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.section__center {
+		display: flex;
+		align-items: center;
+	}
+	.right__half {
+		width: 45%;
+	}
+
+	.left__half {
+		width: 45%;
+		margin-right: 2rem;
+	}
+}

@@ -1,0 +1,26 @@
+.blogs__section {
+	margin: 4rem 3rem 2rem 4rem;
+}
+
+.btn__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+	.blogs__section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.blogs__section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

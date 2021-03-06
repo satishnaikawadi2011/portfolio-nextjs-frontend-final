@@ -1,0 +1,74 @@
+.edu__exp__sec {
+	position: relative;
+	width: 100vw;
+	background-image: var(--mainGradient);
+	transition: all 0.3s linear;
+	margin: -1px auto 0 auto;
+}
+
+.education__section {
+	padding: 1rem 2rem;
+}
+
+.btn {
+	display: inline-block;
+	text-transform: capitalize;
+	background: var(--mainGradient);
+	padding: 0.5rem 1rem;
+	border: 0.1px solid var(--primaryColor);
+	color: var(--primaryText);
+	font-weight: bold;
+	transition: all 0.3s linear;
+	margin: 0 1rem;
+	outline: 0;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn--white {
+	background: var(--mainWhite);
+	color: var(--mainBlack);
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem 1rem 5rem 1rem;
+}
+
+#exp__sec h4 {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+#exp__sec {
+	padding-bottom: 2rem;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.edu__exp__sec::after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		background-color: white;
+		top: 10rem;
+		bottom: 2rem;
+		left: 50%;
+		margin-left: -3px;
+	}
+}
+
+.remove__line::after {
+	content: none;
+}
