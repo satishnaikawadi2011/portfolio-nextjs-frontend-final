@@ -18,7 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 		<motion.div variants={cardVariant} initial="hidden" animate="visible" className={styles.blog__card}>
 			<Rosa animation="flip-left">
 				<div className={styles.blog__img__container}>
-					<img src={cover.formats.thumbnail.url} alt={title} className={styles.blog__image} />
+					<img src={cover.formats.thumbnail.url || cover.url} alt={title} className={styles.blog__image} />
 					<span className={styles.blog__createdAt__badge}>{published_at}</span>
 				</div>
 				<div className={styles.blog__card__body}>
