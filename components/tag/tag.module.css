@@ -4,7 +4,7 @@
 	background-color: var(--primaryColor);
 	color: var(--mainWhite);
 	border-radius: 10px;
-	text-transform: capitalize;
+	text-transform: lowercase;
 	font-weight: bold;
 	margin: 0.3rem 0.3rem;
 	transition: all 0.2s linear;
