@@ -25,6 +25,7 @@ export default function Home({
 	projects,
 	experienceItems
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+	console.log(process.env.NEXT_PUBLIC_FRONTEND_DOMAIN);
 	return (
 		<PageWrapper title="Satish Naikawadi - Developer,College Student and Coding Enthusiast" isLandingPage={true}>
 			<Hero path="/" />

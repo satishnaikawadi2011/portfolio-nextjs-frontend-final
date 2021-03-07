@@ -34,7 +34,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 						</Link>
 					)}
 					<Link href={githubLink}>
-						<FaGithub className={styles.project__icon} />
+						<a>
+							<FaGithub className={styles.project__icon} />
+						</a>
 					</Link>
 				</div>
 			</div>

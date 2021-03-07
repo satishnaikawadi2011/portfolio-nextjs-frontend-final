@@ -59,6 +59,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({
 		<motion.div variants={pageVariant} initial="hidden" animate="visible" exit="exit">
 			<Head>
 				<title>{title}</title>
+				<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
 				{MetaTags && <MetaTags />}
 			</Head>
 			<Header />

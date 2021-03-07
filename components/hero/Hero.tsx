@@ -35,14 +35,25 @@ const Hero: React.FC<HeroProps> = ({ path }) => {
 			/>
 			<motion.main className={styles.hero} initial="hidden" animate="visible" variants={heroVariant}>
 				<div className={styles.hero__image__container}>
-					<Image
+					<picture>
+						<source srcSet="images/hero-2x.jpg" media="(min-width: 568px)" className={styles.hero__image} />
+						<source srcSet="images/hero-3x.jpg" media="(min-width: 768px)" className={styles.hero__image} />
+						<img
+							src="/images/hero-1x.jpg"
+							alt="Satish Naikawadi"
+							width={200}
+							height={300}
+							className={styles.hero__image}
+						/>
+					</picture>
+					{/* <Image
 						layout="responsive"
 						width={500}
 						height={500}
 						className={styles.hero__image}
 						src="/images/hero-1.jpg"
 						alt="Satish Naikawadi"
-					/>
+					/> */}
 				</div>
 				<div className={styles.hero__info}>
 					<div className={styles.hero__title}>

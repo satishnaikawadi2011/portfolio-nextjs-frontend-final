@@ -11,36 +11,44 @@ const Socialicons: React.FC<SocialIconsProps> = ({ color = 'var(--primaryText)' 
 	return (
 		<div className={styles.social__icons}>
 			<Link href="https://www.facebook.com/satishananda.naikawadi.3">
-				<FaFacebookF
-					className={styles.social__icon}
-					style={{ fill: color, border: `3px solid ${color}` }}
-					fill={color}
-					color={color}
-				/>
+				<a>
+					<FaFacebookF
+						className={styles.social__icon}
+						style={{ fill: color, border: `3px solid ${color}` }}
+						fill={color}
+						color={color}
+					/>
+				</a>
 			</Link>
 			<Link href="https://www.instagram.com/satish_011e/">
-				<FaInstagram
-					className={styles.social__icon}
-					style={{ fill: color, border: `3px solid ${color}` }}
-					fill={color}
-					color={color}
-				/>
+				<a>
+					<FaInstagram
+						className={styles.social__icon}
+						style={{ fill: color, border: `3px solid ${color}` }}
+						fill={color}
+						color={color}
+					/>
+				</a>
 			</Link>
 			<Link href="https://www.linkedin.com/in/satish-naikawadi-8558b5192/">
-				<FaLinkedinIn
-					className={styles.social__icon}
-					style={{ fill: color, border: `3px solid ${color}` }}
-					fill={color}
-					color={color}
-				/>
+				<a>
+					<FaLinkedinIn
+						className={styles.social__icon}
+						style={{ fill: color, border: `3px solid ${color}` }}
+						fill={color}
+						color={color}
+					/>
+				</a>
 			</Link>
 			<Link href="/">
-				<FaTwitter
-					className={styles.social__icon}
-					style={{ fill: color, border: `3px solid ${color}` }}
-					fill={color}
-					color={color}
-				/>
+				<a>
+					<FaTwitter
+						className={styles.social__icon}
+						style={{ fill: color, border: `3px solid ${color}` }}
+						fill={color}
+						color={color}
+					/>
+				</a>
 			</Link>
 		</div>
 	);

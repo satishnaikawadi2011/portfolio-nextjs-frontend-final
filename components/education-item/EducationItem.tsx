@@ -44,7 +44,7 @@ const EducationItem: React.FC<EducationItemProps> = ({ timePeriod, title, subtit
 			>
 				<h2 className={styles.timeline__title}>{title}</h2>
 				<p className={styles.timeline__info}>
-					<div>{subtitle}</div>
+					<span className={styles.subtitle}>{subtitle}</span>
 					{info}
 				</p>
 			</motion.div>
