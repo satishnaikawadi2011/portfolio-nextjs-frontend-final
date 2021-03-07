@@ -12,7 +12,7 @@ interface Props {
 const ProjectsPage = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<div>
-			<PageWrapper title="My Projects">
+			<PageWrapper title="My Projects - Reflection of my skills and what I have learned">
 				<motion.div
 					variants={cardContainerVariant}
 					initial="hidden"

@@ -63,7 +63,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, title, isLandingPag
 				</div>
 				{!isLandingPage && (
 					<div className={styles.page__title}>
-						<h1>{title}</h1>
+						<h1>{title.split('-')[0]}</h1>
 					</div>
 				)}
 				{children}

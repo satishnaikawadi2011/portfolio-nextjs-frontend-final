@@ -5,7 +5,7 @@ import PageWrapper from '../../layout/pagewrapper/PageWrapper';
 
 const AboutPage: React.FC<{}> = ({}) => {
 	return (
-		<PageWrapper title="About Me">
+		<PageWrapper title="About Me - Get to know aboute me">
 			<Hero />
 			<About />
 		</PageWrapper>

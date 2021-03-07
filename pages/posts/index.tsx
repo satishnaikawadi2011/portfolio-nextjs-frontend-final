@@ -15,7 +15,7 @@ interface Props {
 const BlogsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<div>
-			<PageWrapper title="Blog Articles">
+			<PageWrapper title="Blog Articles - My writing about coding things which excites me">
 				<motion.div variants={cardContainerVariant} initial="hidden" animate="visible">
 					{
 						<section className={`section__center ${styles.blogs__section}`}>

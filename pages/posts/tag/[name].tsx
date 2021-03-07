@@ -20,10 +20,10 @@ interface Params extends ParsedUrlQuery {
 }
 const BlogsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	const router = useRouter();
-	const { name } = router.query;
+	const { name }: any = router.query;
 	return (
 		<div>
-			<PageWrapper title="Blog Articles">
+			<PageWrapper title={`Blog Articles - My Articles related to ${name.toLowerCase()}`}>
 				<motion.div variants={cardContainerVariant} initial="hidden" animate="visible">
 					{
 						<section className={`section__center ${styles.blogs__section}`}>

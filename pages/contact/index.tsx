@@ -5,7 +5,7 @@ import styles from './contact-page.module.css';
 
 const ContactPage: React.FC<{}> = ({}) => {
 	return (
-		<PageWrapper title="Contact Me">
+		<PageWrapper title="Contact Me- Ask anything regarding coding.">
 			<div className={styles.page__content}>
 				<ul className={styles.hero__list}>
 					<HeroListItem

@@ -26,7 +26,7 @@ export default function Home({
 	experienceItems
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
-		<PageWrapper title="Satish Naikawadi - Developer" isLandingPage={true}>
+		<PageWrapper title="Satish Naikawadi - Developer,College Student and Coding Enthusiast" isLandingPage={true}>
 			<Hero path="/" />
 			<About title />
 			<EducationSection educationItems={educationItems} experienceItems={experienceItems} />
