@@ -13,7 +13,7 @@ interface Props {
 const seoInfo = {
 	description:
 		`These are some of my web development and mobile app development projects which cover so many popular technologies such as ReactJS,NodeJS,ElectronJS,React Native,Flutter,Django,etc.`,
-	image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+	image: `https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825__340.jpg`,
 	url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/projects`
 };
 

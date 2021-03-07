@@ -12,7 +12,7 @@ const seoInfo = {
 
 const ContactPage: React.FC<{}> = ({}) => {
 	return (
-		<PageWrapper title="Contact Me- Ask anything regarding coding.">
+		<PageWrapper seoInfo={seoInfo} title="Contact Me- Ask anything regarding coding.">
 			<div className={styles.page__content}>
 				<ul className={styles.hero__list}>
 					<HeroListItem
@@ -35,6 +35,7 @@ const ContactPage: React.FC<{}> = ({}) => {
 								className={styles.form__control}
 								placeholder="Enter your name"
 								name="name"
+								id="name"
 							/>
 						</div>
 						<div className={styles.form__group}>
@@ -47,6 +48,7 @@ const ContactPage: React.FC<{}> = ({}) => {
 								className={styles.form__control}
 								placeholder="Enter your email"
 								name="email"
+								id="email"
 							/>
 						</div>
 						<div className={styles.form__group}>
@@ -59,6 +61,7 @@ const ContactPage: React.FC<{}> = ({}) => {
 								className={styles.form__control}
 								placeholder="Enter your address"
 								name="address"
+								id="address"
 							/>
 						</div>
 					</div>
@@ -73,6 +76,7 @@ const ContactPage: React.FC<{}> = ({}) => {
 								className={styles.form__control}
 								placeholder="Enter subject"
 								name="subject"
+								id="subject"
 							/>
 						</div>
 						<div className={styles.form__group}>
@@ -85,6 +89,7 @@ const ContactPage: React.FC<{}> = ({}) => {
 								className={styles.form__control}
 								placeholder="Enter message"
 								name="message"
+								id="message"
 							/>
 						</div>
 					</div>

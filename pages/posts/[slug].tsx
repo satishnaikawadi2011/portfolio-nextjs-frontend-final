@@ -36,7 +36,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 							return <Tag tagName={tag.name} />;
 						})}
 					</div>
-					<SocialShare item={post} size={70} url="https://saty-portfolio.netlify.app/" />
+					<SocialShare item={post} size={70} url={`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/slug`} />
 				</div>
 				<div className="divider" />
 				<MdContent>{post.content}</MdContent>
@@ -44,12 +44,18 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 				<div className={styles.tags__and__social__share}>
 					<div className={styles.social__share}>
 						<h2>Share</h2>
-						<SocialShare item={post} size={50} url="https://saty-portfolio.netlify.app/" />
+						<SocialShare
+							item={post}
+							size={50}
+							url={`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/slug`}
+						/>
 					</div>
 					<div className={styles.tags}>
 						<h2>Tags</h2>
 						{post.tags.map((tag: any) => {
-							return <Tag bgColor="var(--secondaryColor)" color="black" tagName={tag.name} />;
+							return (
+								<Tag bgColor="var(--secondaryColor)" color="black" tagName={tag.name} key={tag.id} />
+							);
 						})}
 					</div>
 				</div>

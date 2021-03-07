@@ -11,7 +11,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 const seoInfo = {
 	description:
 		`This is my personal blog.Here I weekly post new articles realated to exciting,interesting and new technologies/frameworks in dev community.`,
-	image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+	image: `https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg`,
 	url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts`
 };
 
@@ -22,7 +22,7 @@ interface Props {
 const BlogsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<div>
-			<PageWrapper title="Blog Articles - My writing about coding things which excites me">
+			<PageWrapper seoInfo={seoInfo} title="Blog Articles - My writing about coding things which excites me">
 				<motion.div variants={cardContainerVariant} initial="hidden" animate="visible">
 					{
 						<section className={`section__center ${styles.blogs__section}`}>

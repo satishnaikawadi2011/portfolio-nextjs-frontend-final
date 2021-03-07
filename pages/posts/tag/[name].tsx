@@ -24,7 +24,7 @@ const BlogsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) =>
 	const seoInfo = {
 		description:
 			`This is my personal blog.These are some latest articles realated to exciting and interesting things of ${name}`,
-		image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+		image: `https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg`,
 		url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/tag/${name}`
 	};
 	return (
