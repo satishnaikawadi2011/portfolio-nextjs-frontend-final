@@ -4,6 +4,7 @@ import Header from '../header/Header';
 import styles from './pagewrapper.module.css';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+
 import MySwitch from '../../components/my-switch/MySwitch';
 
 interface PageWrapperProps {
@@ -11,6 +12,7 @@ interface PageWrapperProps {
 	isLandingPage?: boolean;
 	style?: React.CSSProperties | undefined;
 	className?: string | undefined;
+	metaTags?: React.FC;
 }
 
 const pageVariant = {
@@ -30,7 +32,14 @@ const pageVariant = {
 		}
 };
 
-const PageWrapper: React.FC<PageWrapperProps> = ({ children, title, isLandingPage = false, style = {}, className }) => {
+const PageWrapper: React.FC<PageWrapperProps> = ({
+	children,
+	title,
+	isLandingPage = false,
+	style = {},
+	className,
+	metaTags: MetaTags
+}) => {
 	const [
 		darkMode,
 		setDarkMode
@@ -50,6 +59,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, title, isLandingPag
 		<motion.div variants={pageVariant} initial="hidden" animate="visible" exit="exit">
 			<Head>
 				<title>{title}</title>
+				{MetaTags && <MetaTags />}
 			</Head>
 			<Header />
 			<div className={`${styles.content} ${className}`} style={{ ...style }}>
