@@ -3,6 +3,13 @@ import HeroListItem from '../../components/hero-list-item/HeroListItem';
 import PageWrapper from '../../layout/pagewrapper/PageWrapper';
 import styles from './contact-page.module.css';
 
+const seoInfo = {
+	description:
+		`If anyone has any queries regarding blog articles or want any suggestion,opinion about learning web development,app development,etc.,they can contact me any time.`,
+	image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+	url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/contact`
+};
+
 const ContactPage: React.FC<{}> = ({}) => {
 	return (
 		<PageWrapper title="Contact Me- Ask anything regarding coding.">

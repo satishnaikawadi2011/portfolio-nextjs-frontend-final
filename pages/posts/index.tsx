@@ -8,6 +8,13 @@ import BlogCard from '../../components/blog-card/BlogCard';
 import { Post } from '../../models/Post';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
+const seoInfo = {
+	description:
+		`This is my personal blog.Here I weekly post new articles realated to exciting,interesting and new technologies/frameworks in dev community.`,
+	image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+	url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts`
+};
+
 interface Props {
 	posts: Post[];
 }

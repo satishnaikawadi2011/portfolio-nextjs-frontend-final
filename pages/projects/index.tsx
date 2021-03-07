@@ -9,10 +9,18 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 interface Props {
 	projects: Project[];
 }
+
+const seoInfo = {
+	description:
+		`These are some of my web development and mobile app development projects which cover so many popular technologies such as ReactJS,NodeJS,ElectronJS,React Native,Flutter,Django,etc.`,
+	image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+	url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/projects`
+};
+
 const ProjectsPage = ({ projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<div>
-			<PageWrapper title="My Projects - Reflection of my skills and what I have learned">
+			<PageWrapper seoInfo={seoInfo} title="My Projects - Reflection of my skills and what I have learned">
 				<motion.div
 					variants={cardContainerVariant}
 					initial="hidden"

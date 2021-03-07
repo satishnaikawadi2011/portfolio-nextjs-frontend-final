@@ -20,9 +20,14 @@ interface Params extends ParsedUrlQuery {
 }
 
 const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
+	const seoInfo = {
+		description: post.description,
+		image: post.cover.url,
+		url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/slug/${post.slug}`
+	};
 	return (
 		<React.Fragment>
-			<PageWrapper title={post.title} className={styles.content}>
+			<PageWrapper seoInfo={seoInfo} title={post.title} className={styles.content}>
 				<div className={styles.post__info}>
 					<span>{formate(post.createdAt)}</span>
 					<span>&bull; {readingTime(post.content).text}</span>

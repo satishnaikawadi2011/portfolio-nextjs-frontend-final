@@ -12,6 +12,14 @@ import { Experience } from '../models/Experience';
 import { Post } from '../models/Post';
 import { Project } from '../models/Project';
 import { InferGetStaticPropsType } from 'next';
+import React from 'react';
+
+const seoInfo = {
+	description:
+		'Top Web Development blog articles,Top Web Development projects,Full Stack Development projects,App Development projects with Complete Source Code and more.',
+	image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+	url: process.env.NEXT_PUBLIC_FRONTEND_DOMAIN
+};
 interface Props {
 	posts: Post[];
 	educationItems: Education[];
@@ -25,9 +33,13 @@ export default function Home({
 	projects,
 	experienceItems
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-	console.log(process.env.NEXT_PUBLIC_FRONTEND_DOMAIN);
+	// console.log(process.env.NEXT_PUBLIC_FRONTEND_DOMAIN);
 	return (
-		<PageWrapper title="Satish Naikawadi - Developer,College Student and Coding Enthusiast" isLandingPage={true}>
+		<PageWrapper
+			title="Satish Naikawadi - Developer,College Student and Coding Enthusiast"
+			seoInfo={seoInfo}
+			isLandingPage={true}
+		>
 			<Hero path="/" />
 			<About title />
 			<EducationSection educationItems={educationItems} experienceItems={experienceItems} />

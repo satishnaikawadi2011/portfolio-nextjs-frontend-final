@@ -21,9 +21,15 @@ interface Params extends ParsedUrlQuery {
 const BlogsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	const router = useRouter();
 	const { name }: any = router.query;
+	const seoInfo = {
+		description:
+			`This is my personal blog.These are some latest articles realated to exciting and interesting things of ${name}`,
+		image: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/images/hero-3x.jpg`,
+		url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/tag/${name}`
+	};
 	return (
 		<div>
-			<PageWrapper title={`Blog Articles - My Articles related to ${name.toLowerCase()}`}>
+			<PageWrapper seoInfo={seoInfo} title={`Blog Articles - My Articles related to ${name.toLowerCase()}`}>
 				<motion.div variants={cardContainerVariant} initial="hidden" animate="visible">
 					{
 						<section className={`section__center ${styles.blogs__section}`}>
