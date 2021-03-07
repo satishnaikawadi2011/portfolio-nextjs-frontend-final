@@ -36,8 +36,9 @@ const Hero: React.FC<HeroProps> = ({ path }) => {
 			<motion.main className={styles.hero} initial="hidden" animate="visible" variants={heroVariant}>
 				<div className={styles.hero__image__container}>
 					<picture>
-						<source srcSet="images/hero-2x.jpg" media="(min-width: 568px)" className={styles.hero__image} />
-						<source srcSet="images/hero-3x.jpg" media="(min-width: 768px)" className={styles.hero__image} />
+						<source srcSet="images/hero-2x.jpg" media="(min-width: 450px)" className={styles.hero__image} />
+						<source srcSet="images/hero-3x.jpg" media="(min-width: 650px)" className={styles.hero__image} />
+						<source srcSet="images/hero-4x.jpg" media="(min-width: 850px)" className={styles.hero__image} />
 						<img
 							src="/images/hero-1x.jpg"
 							alt="Satish Naikawadi"
