@@ -12,7 +12,7 @@ const AboutCard: React.FC<AboutCardProps> = ({ icon: Icon, title, stats }) => {
 		<div className={styles.about__card}>
 			<Icon className={styles.about__card__icon} />
 			<h2 className={styles.about__card__stats}>{stats}</h2>
-			<h4 className={styles.about__card__title}>{title}</h4>
+			<h3 className={styles.about__card__title}>{title}</h3>
 		</div>
 	);
 };

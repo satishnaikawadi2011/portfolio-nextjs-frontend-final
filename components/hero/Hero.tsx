@@ -3,6 +3,7 @@ import HeroListItem from '../hero-list-item/HeroListItem';
 import styles from './hero.module.css';
 import { motion } from 'framer-motion';
 import Socialicons from '../social-icons/SocialIcons';
+import Image from 'next/image';
 
 const heroVariant = {
 	visible:
@@ -34,12 +35,19 @@ const Hero: React.FC<HeroProps> = ({ path }) => {
 			/>
 			<motion.main className={styles.hero} initial="hidden" animate="visible" variants={heroVariant}>
 				<div className={styles.hero__image__container}>
-					<img className={styles.hero__image} src="images/hero-1.jpg" alt="Satish Naikawadi" />
+					<Image
+						layout="responsive"
+						width={500}
+						height={500}
+						className={styles.hero__image}
+						src="/images/hero-1.jpg"
+						alt="Satish Naikawadi"
+					/>
 				</div>
 				<div className={styles.hero__info}>
 					<div className={styles.hero__title}>
-						<h4 className={styles.hero__intro__text}>hello everybody , i am</h4>
-						<h1>satish naikawadi</h1>
+						<h1 className={styles.hero__intro__text}>hello everybody , i am</h1>
+						<h1 className={styles.hero__name}>satish naikawadi</h1>
 						<h2>Web Developer / App Developer / CS College Student</h2>
 					</div>
 					<p className={styles.hero__text}>

@@ -3,8 +3,8 @@ import Footer from '../footer/Footer';
 import Header from '../header/Header';
 import styles from './pagewrapper.module.css';
 import { motion } from 'framer-motion';
-import Switch from 'react-switch';
 import Head from 'next/head';
+import MySwitch from '../../components/my-switch/MySwitch';
 
 interface PageWrapperProps {
 	title: string;
@@ -54,7 +54,12 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, title, isLandingPag
 			<Header />
 			<div className={`${styles.content} ${className}`} style={{ ...style }}>
 				<div className={styles.themeToggleContainer}>
-					<Switch onChange={handleChangeTheme} checked={darkMode} />
+					<MySwitch
+						toggleSelected={handleChangeTheme}
+						selected={darkMode}
+						selectedString="Light"
+						disabledString="Dark"
+					/>
 				</div>
 				{!isLandingPage && (
 					<div className={styles.page__title}>

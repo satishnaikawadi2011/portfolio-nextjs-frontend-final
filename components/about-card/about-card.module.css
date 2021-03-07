@@ -22,6 +22,7 @@
 .about__card__title {
 	text-transform: uppercase;
 	color: var(--primaryText);
+	font-size: 1.7rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,10 +31,17 @@
 		width: 33%;
 		flex: 0 0 calc(33.333%-2rem);
 	}
+	.about__card__title {
+		font-size: 1.3rem;
+	}
 }
 
 @media screen and (min-width: 992px) {
 	.about__card {
 		margin: 0 0.2rem;
+	}
+
+	.about__card__title {
+		font-size: 1.5rem;
 	}
 }

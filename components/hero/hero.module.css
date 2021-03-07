@@ -27,9 +27,10 @@
 	color: var(--darkGrey);
 	margin-bottom: 0;
 	font-size: 1.5rem;
+	font-family: 'Economica', sans-serif;
 }
 
-.hero__title h1 {
+.hero__name {
 	margin-top: 1rem;
 	font-size: 4rem;
 	line-height: 1.2;
@@ -146,5 +147,9 @@
 
 	.hero__info {
 		margin-left: 4rem;
+	}
+
+	.hero__intro__text {
+		font-size: 2rem;
 	}
 }

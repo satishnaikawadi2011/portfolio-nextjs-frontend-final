@@ -8,6 +8,7 @@ import { Post } from '../../models/Post';
 import readingTimeFunc from 'reading-time';
 import truncateText from '../../utils/truncateText';
 import formate from '../../utils/formateDate';
+import Image from 'next/image';
 
 interface BlogCardProps {
 	post: Post;
@@ -19,7 +20,14 @@ const BlogCard: React.FC<BlogCardProps> = ({
 	return (
 		<motion.div variants={cardVariant} initial="hidden" animate="visible" className={styles.blog__card}>
 			<div className={styles.blog__img__container}>
-				<img src={cover.url} alt={title} className={styles.blog__image} />
+				<Image
+					layout="responsive"
+					src={cover.url}
+					alt={title}
+					width={300}
+					height={300}
+					className={styles.blog__image}
+				/>
 				<span className={styles.blog__createdAt__badge}>{formate(published_at)}</span>
 			</div>
 			<div className={styles.blog__card__body}>

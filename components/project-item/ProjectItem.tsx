@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import { Project } from '../../models/Project';
 import Tag from '../tag/Tag';
-
+import Image from 'next/image';
 interface ProjectItemProps {
 	project: Project;
 }
@@ -17,7 +17,14 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 	return (
 		<motion.div variants={cardVariant} initial="hidden" animate="visible" className={styles.project}>
 			<div className={styles.project__img__container}>
-				<img src={cover.url} alt={title} className={styles.project__image} />
+				<Image
+					src={cover.url}
+					alt={title}
+					layout="responsive"
+					width={300}
+					height={300}
+					className={styles.project__image}
+				/>
 				<div className={styles.project__icon__container}>
 					{demoLink && (
 						<Link href={demoLink}>
