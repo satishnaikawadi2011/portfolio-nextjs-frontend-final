@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, DocumentContext } from 'next/document';
+import { GA_TRACKING_ID } from '../libs/gtag/gtag';
 import DeferNextScript from '../utils/DeferNextScript';
 
 class MyDocument extends Document {
@@ -18,6 +19,20 @@ class MyDocument extends Document {
 					<link rel="manifest" href="/manifest.json" />
 					<link rel="apple-touch-icon" href="/images/logo.png" />
 					<meta name="theme-color" content="#2196f3" />
+					<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+					<script
+						dangerouslySetInnerHTML={{
+							__html:
+								`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `
+						}}
+					/>
 				</Head>
 				<body>
 					<Main />

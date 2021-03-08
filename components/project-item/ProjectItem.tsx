@@ -7,13 +7,22 @@ import Link from 'next/link';
 import { Project } from '../../models/Project';
 import Tag from '../tag/Tag';
 import Image from 'next/image';
+import { trackEvent } from '../../libs/gtag/gtag';
 interface ProjectItemProps {
 	project: Project;
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
-	project: { category, githubLink, cover, tags, demoLink, title }
+	project: { category, githubLink, cover, tags, demoLink, title, id }
 }) => {
+	const onClick = (label, value) => {
+		trackEvent({
+			action: 'click',
+			category: 'Project Link',
+			label,
+			value
+		});
+	};
 	return (
 		<motion.div variants={cardVariant} initial="hidden" animate="visible" className={styles.project}>
 			<div className={styles.project__img__container}>
@@ -28,14 +37,14 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 				<div className={styles.project__icon__container}>
 					{demoLink && (
 						<Link href={demoLink}>
-							<svg className={styles.project__icon}>
+							<svg className={styles.project__icon} onClick={() => onClick('Demo', id)}>
 								<use href="images/sprite.svg#icon-eye" />
 							</svg>
 						</Link>
 					)}
 					<Link href={githubLink}>
 						<a>
-							<FaGithub className={styles.project__icon} />
+							<FaGithub className={styles.project__icon} onClick={() => onClick('Github', id)} />
 						</a>
 					</Link>
 				</div>
