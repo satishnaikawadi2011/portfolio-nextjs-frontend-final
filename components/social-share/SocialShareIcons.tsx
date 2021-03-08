@@ -6,12 +6,14 @@ import {
 	FacebookShareButton,
 	LinkedinIcon,
 	LinkedinShareButton,
-	TumblrIcon,
-	TumblrShareButton,
+	TelegramIcon,
+	TelegramShareButton,
 	TwitterIcon,
 	TwitterShareButton,
 	WhatsappIcon,
-	WhatsappShareButton
+	WhatsappShareButton,
+	RedditShareButton,
+	RedditIcon
 } from 'react-share';
 
 interface SocialShareProps {
@@ -70,21 +72,24 @@ const SocialShare: React.FC<SocialShareProps> = ({ item = {}, url, size = 50 }) 
 					iconFillColor="var(--secondaryColor)"
 				/>
 			</WhatsappShareButton>
-			<TumblrShareButton
-				url={url}
-				title={item.title}
-				tags={item.tags.map((tag: any) => tag.name)}
-				caption={item.description}
-				className={styles.share__btn}
-			>
-				<TumblrIcon
+			<TelegramShareButton url={url} title={item.title} about={item.description} className={styles.share__btn}>
+				<TelegramIcon
 					size={size}
 					bgStyle={{
 						fill: 'none'
 					}}
 					iconFillColor="var(--secondaryColor)"
 				/>
-			</TumblrShareButton>
+			</TelegramShareButton>
+			<RedditShareButton about={item.description} url={url} title={item.title} className={styles.share__btn}>
+				<RedditIcon
+					size={size}
+					bgStyle={{
+						fill: 'none'
+					}}
+					iconFillColor="var(--secondaryColor)"
+				/>
+			</RedditShareButton>
 		</div>
 	);
 };

@@ -33,7 +33,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 					<span>&bull; {readingTime(post.content).text}</span>
 					<div>
 						{post.tags.map((tag) => {
-							return <Tag tagName={tag.name} />;
+							return <Tag tagName={tag.name} key={tag.id} />;
 						})}
 					</div>
 					<SocialShare
