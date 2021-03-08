@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
 	images : {
 		domains : [
@@ -5,6 +7,8 @@ module.exports = {
 		]
 	},
 	env    : {
-		NEXT_PUBLIC_FRONTEND_DOMAIN : 'http://localhost:3000'
+		NEXT_PUBLIC_FRONTEND_DOMAIN :
+			isProd ? 'http://localhost:3000' :
+			process.env.NEXT_PUBLIC_FRONTEND_DOMAIN
 	}
 };
