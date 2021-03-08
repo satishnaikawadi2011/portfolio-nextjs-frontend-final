@@ -47,7 +47,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 						<SocialShare
 							item={post}
 							size={50}
-							url={`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/slug`}
+							url={`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/${post.slug}`}
 						/>
 					</div>
 					<div className={styles.tags}>
