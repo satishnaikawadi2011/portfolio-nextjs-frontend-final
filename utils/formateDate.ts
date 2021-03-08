@@ -1,7 +1,20 @@
 const formate = (dateString: string): string => {
-	var date = new Date(dateString);
-	var options = { year: 'numeric', month: 'long', day: 'numeric' };
-	const formatedDate = date.toLocaleDateString('en-US', options);
+	var date: Date = new Date(dateString);
+	const monthNames = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	];
+	const formatedDate = `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
 	return formatedDate;
 };
 
