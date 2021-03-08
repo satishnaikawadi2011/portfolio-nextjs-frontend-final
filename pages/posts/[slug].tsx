@@ -36,7 +36,11 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 							return <Tag tagName={tag.name} />;
 						})}
 					</div>
-					<SocialShare item={post} size={70} url={`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/slug`} />
+					<SocialShare
+						item={post}
+						size={70}
+						url={`${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/posts/${post.slug}`}
+					/>
 				</div>
 				<div className="divider" />
 				<MdContent>{post.content}</MdContent>
