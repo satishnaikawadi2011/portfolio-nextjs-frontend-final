@@ -1,7 +1,12 @@
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import React from 'react';
 import Hero from '../../components/hero/Hero';
 import About from '../../components/sections/about/About';
 import PageWrapper from '../../layout/pagewrapper/PageWrapper';
+
+interface Props {
+	postCount: number;
+}
 
 const seoInfo = {
 	description:
@@ -11,13 +16,21 @@ const seoInfo = {
 	url: `${process.env.NEXT_PUBLIC_FRONTEND_DOMAIN}/about`
 };
 
-const AboutPage: React.FC<{}> = ({}) => {
+const AboutPage = ({ postCount }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<PageWrapper title="About Me - Get to know aboute me" seoInfo={seoInfo}>
 			<Hero />
-			<About />
+			<About postCount={postCount} />
 		</PageWrapper>
 	);
 };
 
 export default AboutPage;
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
+	const res = await fetch('https://saty-api.herokuapp.com/posts/count');
+	const postCount: number = await res.json();
+	return {
+		props: { postCount }
+	};
+};

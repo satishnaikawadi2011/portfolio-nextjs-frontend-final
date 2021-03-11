@@ -25,13 +25,15 @@ interface Props {
 	educationItems: Education[];
 	experienceItems: Experience[];
 	projects: Project[];
+	postCount: number;
 }
 
 export default function Home({
 	educationItems,
 	posts,
 	projects,
-	experienceItems
+	experienceItems,
+	postCount
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
 		<PageWrapper
@@ -40,7 +42,7 @@ export default function Home({
 			isLandingPage={true}
 		>
 			<Hero path="/" />
-			<About title />
+			<About title postCount={postCount} />
 			<EducationSection educationItems={educationItems} experienceItems={experienceItems} />
 			<Services />
 			<Projects projects={projects} />
@@ -59,7 +61,9 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 	const experienceItems: Experience[] = await res3.json();
 	const res4 = await fetch('https://saty-api.herokuapp.com/projects?_sort=createdAt:DESC&_limit=3');
 	const projects: Project[] = await res4.json();
+	const res5 = await fetch('https://saty-api.herokuapp.com/posts/count');
+	const postCount: number = await res5.json();
 	return {
-		props: { posts, educationItems, experienceItems, projects }
+		props: { posts, educationItems, experienceItems, projects, postCount }
 	};
 };

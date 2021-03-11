@@ -11,9 +11,10 @@ import { fadeInLeftVariant, fadeInRightVariant } from '../../../animations/Scrol
 
 interface AboutProps {
 	title?: boolean;
+	postCount: number;
 }
 
-const About: React.FC<AboutProps> = ({ title }) => {
+const About: React.FC<AboutProps> = ({ title, postCount }) => {
 	const [
 		ref,
 		inView
@@ -45,7 +46,7 @@ const About: React.FC<AboutProps> = ({ title }) => {
 
 					<div className={styles.about__cards}>
 						<AboutCard icon={ImFilesEmpty} stats={12} title="total projects" />
-						<AboutCard icon={RiArticleLine} stats={3} title="total articles" />
+						<AboutCard icon={RiArticleLine} stats={postCount} title="total articles" />
 						<AboutCard icon={GrTechnology} stats={25} title="total technologies" />
 					</div>
 				</motion.div>
