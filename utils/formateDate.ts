@@ -14,7 +14,7 @@ const formate = (dateString: string): string => {
 		'November',
 		'December'
 	];
-	const formatedDate = `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+	const formatedDate = `${date.getDate()} ${monthNames[date.getMonth()]} , ${date.getFullYear()}`;
 	return formatedDate;
 };
 
