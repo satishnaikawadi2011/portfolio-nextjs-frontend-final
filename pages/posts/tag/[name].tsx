@@ -73,7 +73,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) => {
-	const res = await fetch(`https://saty-api.herokuapp.com/posts?tags.name_in=${params.name}&_sort=createdAt:DESC`);
+	const res = await fetch(`https://saty-api.herokuapp.com/posts?tags.name_in=${params.name}&_sort=published_at:DESC`);
 	const posts: Post[] = await res.json();
 	return {
 		props: { posts }

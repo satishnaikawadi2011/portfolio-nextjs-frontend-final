@@ -53,7 +53,7 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
-	const res = await fetch('https://saty-api.herokuapp.com/posts?_sort=createdAt:DESC&_limit=3');
+	const res = await fetch('https://saty-api.herokuapp.com/posts?_sort=published_at:DESC&_limit=3');
 	const posts: Post[] = await res.json();
 	const res2 = await fetch('https://saty-api.herokuapp.com/educations?_sort=createdAt:DESC&_limit=3');
 	const educationItems: Education[] = await res2.json();
