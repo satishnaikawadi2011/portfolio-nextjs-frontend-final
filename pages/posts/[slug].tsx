@@ -3,6 +3,7 @@ import PageWrapper from '../../layout/pagewrapper/PageWrapper';
 import readingTime from 'reading-time';
 import SocialShare from '../../components/social-share/SocialShareIcons';
 
+import Head from 'next/head';
 import styles from './post-page.module.css';
 import formate from '../../utils/formateDate';
 import Tag from '../../components/tag/Tag';
@@ -28,6 +29,13 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<React.Fragment>
 			<PageWrapper seoInfo={seoInfo} title={post.title} className={styles.content}>
+				<Head>
+					<script
+						data-ad-client="ca-pub-6362354905664084"
+						async
+						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+					/>
+				</Head>
 				<div className={styles.post__info}>
 					<span>{formate(post.published_at)}</span>
 					<span>&bull; {readingTime(post.content).text}</span>
