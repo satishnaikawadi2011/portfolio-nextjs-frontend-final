@@ -29,7 +29,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
 		<React.Fragment>
 			<PageWrapper seoInfo={seoInfo} title={post.title} className={styles.content}>
 				<div className={styles.post__info}>
-					<span>{formate(post.createdAt)}</span>
+					<span>{formate(post.published_at)}</span>
 					<span>&bull; {readingTime(post.content).text}</span>
 					<div>
 						{post.tags.map((tag) => {
