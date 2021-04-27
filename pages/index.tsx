@@ -13,6 +13,7 @@ import { Post } from '../models/Post';
 import { Project } from '../models/Project';
 import { InferGetStaticPropsType } from 'next';
 import React from 'react';
+import Head from 'next/head';
 
 const seoInfo = {
 	description:
@@ -41,6 +42,13 @@ export default function Home({
 			seoInfo={seoInfo}
 			isLandingPage={true}
 		>
+			<Head>
+				<script
+					data-ad-client="ca-pub-6362354905664084"
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+				/>
+			</Head>
 			<Hero path="/" />
 			<About title postCount={postCount} />
 			<EducationSection educationItems={educationItems} experienceItems={experienceItems} />
